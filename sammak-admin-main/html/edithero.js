@@ -29,7 +29,7 @@ function addHero() {
     console.log("Form data is not empty ");
   }
   fetch(
-    "http://13.200.180.167:9731/HeroSlider/updateSlider/" +
+    "https://developmentsamak-production-7c7b.up.railway.app/HeroSlider/updateSlider/" +
       localStorage.getItem("edit"),
     {
       method: "PUT",

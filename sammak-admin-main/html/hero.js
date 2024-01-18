@@ -24,16 +24,19 @@ function addHero() {
   // Make an AJAX request to the Spring Boot backend
   var formData = new FormData(document.getElementById("heroSlider"));
   console.log(formData);
-  fetch("http://13.200.180.167:9731/HeroSlider/addHeroSlider", {
-    method: "POST",
-    body: formData,
+  fetch(
+    "https://developmentsamak-production-7c7b.up.railway.app/HeroSlider/addHeroSlider",
+    {
+      method: "POST",
+      body: formData,
 
-    headers: {
-      // Accept: "*/*",
-      Authorization: `Bearer ` + localStorage.getItem("token"),
-      Accept: "application/json",
-    },
-  })
+      headers: {
+        // Accept: "*/*",
+        Authorization: `Bearer ` + localStorage.getItem("token"),
+        Accept: "application/json",
+      },
+    }
+  )
     .then((response) => response.json())
     .then((data) => {
       // Handle the response from the backend

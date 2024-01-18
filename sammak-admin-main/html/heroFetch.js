@@ -44,13 +44,16 @@ async function getHero() {
       Authorization: `Bearer ` + token,
     },
   };
-  const response = await fetch("http://13.200.180.167:9731/HeroSlider/getAll", {
-    method: "GET",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-    config,
-  });
+  const response = await fetch(
+    "https://developmentsamak-production-7c7b.up.railway.app/HeroSlider/getAll",
+    {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      config,
+    }
+  );
 
   const data = await response.json();
   heroList(data);
@@ -182,7 +185,7 @@ function loadDelete() {
     const deleteId = id;
 
     const response = await fetch(
-      `http://13.200.180.167:9731/HeroSlider/deleteSlider/${deleteId}`,
+      `https://developmentsamak-production-7c7b.up.railway.app/HeroSlider/deleteSlider/${deleteId}`,
       {
         method: "DELETE",
         headers: {

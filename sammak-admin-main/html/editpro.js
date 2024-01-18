@@ -66,7 +66,7 @@ function editProduct() {
   document.querySelector(".dot-spinner").classList.remove("d-none");
 
   fetch(
-    "http://13.200.180.167:9731/admin/updateProductById/" +
+    "https://developmentsamak-production-7c7b.up.railway.app/admin/updateProductById/" +
       localStorage.getItem("editpro"),
     {
       method: "PUT",

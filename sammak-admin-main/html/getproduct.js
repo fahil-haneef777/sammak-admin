@@ -47,13 +47,16 @@ async function getProduct() {
   const tableContainer = document.querySelector(".tBody");
 
   document.querySelector(".loader").classList.remove("d-none");
-  const response = await fetch("http://13.200.180.167:9731/Product/post", {
-    method: "GET",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-    config,
-  });
+  const response = await fetch(
+    "https://developmentsamak-production-7c7b.up.railway.app/Product/post",
+    {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      config,
+    }
+  );
 
   const data = await response.json();
 
@@ -145,7 +148,7 @@ function loadDelete() {
     const deleteId = id;
 
     const response = await fetch(
-      `http://13.200.180.167:9731/admin/deleteById/${deleteId}`,
+      `https://developmentsamak-production-7c7b.up.railway.app/admin/deleteById/${deleteId}`,
       {
         method: "DELETE",
         headers: {

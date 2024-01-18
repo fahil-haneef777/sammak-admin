@@ -27,7 +27,7 @@ function add() {
   document.querySelector(".submit-text").classList.add("d-none");
   document.querySelector(".dot-spinner").classList.remove("d-none");
 
-  fetch("http://13.200.180.167:9731/admin/addProducts", {
+  fetch(`/admin/addProducts`, {
     method: "POST",
     body: formData,
 
